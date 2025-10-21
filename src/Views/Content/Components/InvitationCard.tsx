@@ -1,9 +1,22 @@
 // InvitationCard.jsx
 import React, { useEffect, useState } from 'react';
+import { MapPin } from 'lucide-react'; // icon map pin đẹp
 import Countdown from '../../Coutdown';
+// @ts-ignore
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import '../content.scss';
+import SimpleSlideshow from './SlideShowImage';
 
 const InvitationCard = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // chỉ chạy 1 lần
+      offset: 100,
+    });
+  }, []);
   return (
     <div className='bg-[#fff]'>
       <div className='text-center mt-[-1px]'>
@@ -40,16 +53,17 @@ const InvitationCard = () => {
             className='w-40 h-60 object-cover rounded-xl'
           />
         </div>
+        {/* <SimpleSlideshow /> */}
 
-        <div>
+        <div data-aos='fade-up'>
           <p className='uppercase mt-4'>Tiệc mừng Lễ vu quy</p>
 
-          <p className='text-[14px] mt-4 font-[300]'>
+          <p className='text-[14px] mt-4 font-[300]' data-aos='fade-up' data-aos-delay='100'>
             VÀO LÚC <span className='font-[500]'>11 giờ 30</span> |{' '}
             <span className='font-[500]'>Chủ nhật</span>
           </p>
 
-          <p className='text-[24px] mt-[10px]'>
+          <p className='text-[24px] mt-[10px]' data-aos='zoom-in' data-aos-delay='200'>
             <span style={{ marginRight: '15px', marginLeft: '20px' }}>16</span>
             <span
               style={{
@@ -65,29 +79,33 @@ const InvitationCard = () => {
             <span style={{ marginLeft: '15px' }}>2026</span>
           </p>
 
-          <div className='text-center mt-4'>
-            {/* Ngày âm lịch */}
+          <div className='text-center mt-4' data-aos='fade-up' data-aos-delay='300'>
             <p className='italic text-gray-600 text-sm'>( Nhằm ngày 16 tháng 03 năm Bính Ngọ )</p>
 
-            {/* Địa điểm */}
             <p className='mt-2 text-lg font-medium text-gray-800'>
               Tại{' '}
               <span className='text-pink-600 font-semibold'>Ấp 6, Hòa Hội, Xuyên Mộc, BR-VT</span>
             </p>
 
-            {/* Nút xem đường đi */}
             <a
-              href='https://www.google.com/maps/place/S%C3%A2n+B%C3%B3ng+%C4%90%E1%BB%99i+2/@10.6256872,107.4132759,15z/data=!3m1!4b1!4m6!3m5!1s0x3175a58caf2467df:0xe9be86e98cca2f89!8m2!3d10.6256666!4d107.43173!16s%2Fg%2F11gh9q09c_?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D'
+              href='https://www.google.com/maps/...'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-block mt-3 px-5 py-2 bg-pink-500 text-white text-sm font-medium rounded-full shadow-md hover:bg-pink-600 hover:shadow-lg transition-all duration-300'
+              data-aos='zoom-in'
+              data-aos-delay='400'
+              className='inline-flex items-center gap-2 mt-3 pl-5 pr-7 py-2 bg-pink-500 text-white text-sm font-medium rounded-full shadow-md hover:bg-pink-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.03]'
             >
+              <MapPin className='w-4 h-4 animate-bounce-slow' />
               Xem đường đi
             </a>
           </div>
 
-          {/* LỊCH */}
-          <div className='w-[90%] mx-auto bg-white rounded-2xl'>
+          <div
+            className='w-[90%] mx-auto bg-white rounded-2xl p-4'
+            data-aos='fade-up'
+            data-aos-delay={500} // delay tổng thể
+          >
+            {/* Tháng + Năm */}
             <p className='text-right mb-3'>
               <span
                 style={{ fontFamily: '"Dancing Script", cursive', fontSize: '22px' }}
@@ -98,6 +116,7 @@ const InvitationCard = () => {
               <span className='font-bold text-[40px] ml-2 text-slate-800'>2026</span>
             </p>
 
+            {/* Header các ngày trong tuần */}
             <div className='grid grid-cols-7 gap-2 text-center text-slate-700 text-sm'>
               {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((d) => (
                 <div
@@ -107,7 +126,11 @@ const InvitationCard = () => {
                   {d}
                 </div>
               ))}
+
+              {/* khoảng trống trước ngày 1 */}
               <div className='col-span-6'></div>
+
+              {/* Các ngày trong tháng */}
               {Array.from({ length: 30 }, (_, i) => {
                 const day = i + 1;
                 const isEvent = day === 23;
@@ -130,7 +153,8 @@ const InvitationCard = () => {
               })}
             </div>
 
-            <div className='mt-4 pb-6'>
+            {/* Countdown */}
+            <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={1100}>
               <p className="text-center text-pink-600 font-medium tracking-wide mb-3 [font-family:'Dancing_Script',cursive] text-[17px]">
                 💖 Cùng đếm ngược đến ngày vui của hai gia đình
               </p>

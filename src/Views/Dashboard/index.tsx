@@ -10,22 +10,39 @@ function Dashboard() {
   const currentY = useRef(0); // vị trí hiện tại
 
   useEffect(() => {
+    const MAX_SCROLL = 1000; // chỉ áp dụng hiệu ứng trong 1000px đầu tiên
+    const SPEED = 0.2;
+    const EASING = 0.1;
+
     const handleScroll = () => {
-      targetY.current = -window.scrollY * 0.2; // target: dịch ngược, 0.25 = tốc độ
+      const scrollY = Math.min(window.scrollY, MAX_SCROLL);
+      targetY.current = -scrollY * SPEED;
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    let frameId: number;
     const animate = () => {
-      currentY.current += (targetY.current - currentY.current) * 0.1;
+      currentY.current += (targetY.current - currentY.current) * EASING;
+
       if (bgRef.current) {
-        bgRef.current.style.transform = `translateY(${currentY.current}px)`;
+        // chỉ apply transform trong khoảng đầu trang
+        if (window.scrollY < MAX_SCROLL) {
+          bgRef.current.style.transform = `translateY(${currentY.current}px)`;
+        } else {
+          bgRef.current.style.transform = `translateY(${-MAX_SCROLL * SPEED}px)`;
+        }
       }
-      requestAnimationFrame(animate);
+
+      frameId = requestAnimationFrame(animate);
     };
 
     animate();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(frameId);
+    };
   }, []);
 
   return (
