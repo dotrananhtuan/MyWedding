@@ -9,8 +9,8 @@ function OurStory() {
           {/* Nhà trai */}
           <div className='space-y-1 text-xs sm:text-sm md:text-base'>
             <h2 className='text-lg font-semibold text-slate-800'>Nhà trai</h2>
-            <p className='text-slate-700'>Ông Nguyễn Văn B</p>
-            <p className='text-slate-700'>Bà Trần Thị C</p>
+            <p className='text-slate-700'>Ông Nguyễn Văn Nam</p>
+            <p className='text-slate-700'>Bà Trần Thị Nữ</p>
           </div>
 
           {/* Nhà gái */}
