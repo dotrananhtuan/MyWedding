@@ -61,7 +61,6 @@ function Location() {
 
       {/* Nội dung */}
       <div className='relative z-10'>
-        {/* <section className='h-[50vh]' /> */}
         <LoveStoryTimeline />
 
         <ImageCarousel />
