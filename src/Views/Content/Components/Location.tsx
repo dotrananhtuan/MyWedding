@@ -48,7 +48,7 @@ function Location() {
       ref={containerRef}
       className='min-h-[50%] relative'
       style={{
-        backgroundImage: `url(/images/bg.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg.jpg)`,
         backgroundAttachment: 'fixed', // 🧠 nền đứng yên
         backgroundSize: 'cover',
         backgroundPosition: 'center 50%',

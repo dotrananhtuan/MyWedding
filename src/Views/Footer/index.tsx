@@ -16,7 +16,7 @@ function Footer() {
     <footer
       className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center px-6'
       style={{
-        backgroundImage: `url(/images/bg2.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg2.jpg)`,
       }}
       id='footer'
     >

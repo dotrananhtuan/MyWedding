@@ -12,21 +12,21 @@ function ImageCarousel() {
         {/* Hàng 1 */}
         <div className='col-span-2 row-span-2 overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='1'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='2'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='3'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
@@ -35,21 +35,21 @@ function ImageCarousel() {
         {/* Hàng 2 – hình to nằm bên phải */}
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='4'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='5'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='col-span-2 row-span-2 overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='6'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
@@ -58,28 +58,28 @@ function ImageCarousel() {
         {/* Hàng 3 – thêm vài hình nhỏ xen kẽ */}
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='7'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='8'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='9'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />
         </div>
         <div className='overflow-hidden'>
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='10'
             className='w-full h-full object-cover hover:scale-105 transition-transform duration-500'
           />

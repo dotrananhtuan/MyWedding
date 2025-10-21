@@ -24,13 +24,21 @@ const InvitationCard = () => {
         </p>
 
         <div className='flex justify-center items-center gap-2'>
-          <img src='/images/bg.jpg' alt='Ảnh 1' className='w-40 h-60 object-cover rounded-xl' />
           <img
-            src='/images/bg.jpg'
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
+            alt='Ảnh 1'
+            className='w-40 h-60 object-cover rounded-xl'
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
             alt='Ảnh 2'
             className='w-48 h-72 object-cover rounded-2xl shadow-lg'
           />
-          <img src='/images/bg.jpg' alt='Ảnh 3' className='w-40 h-60 object-cover rounded-xl' />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
+            alt='Ảnh 3'
+            className='w-40 h-60 object-cover rounded-xl'
+          />
         </div>
 
         <div>
