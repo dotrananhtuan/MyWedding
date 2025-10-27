@@ -1,8 +1,3 @@
-// @ts-ignore
-import AOS from 'aos';
-import { useEffect } from 'react';
-import 'aos/dist/aos.css';
-
 const story = [
   {
     time: 'Tháng 3, 2018',
@@ -27,25 +22,6 @@ const story = [
 ];
 
 export default function LoveStoryTimeline() {
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      once: false, // ⚡ Cho phép reset lại
-      mirror: true, // 👈 QUAN TRỌNG: cho phép animation chạy ngược khi scroll lên
-      offset: 100,
-    });
-
-    // AOS cần refresh nếu DOM thay đổi (đảm bảo tính ổn định)
-    const handleScroll = () => {
-      AOS.refresh();
-    };
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <section className='relative text-white pt-16 px-6 overflow-hidden' id='love-story'>
       {/* Nếu cần, bạn có thể giữ overlay đen nhẹ ở file cha (Footer hay Background tổng) */}

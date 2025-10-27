@@ -1,17 +1,6 @@
 import React, { useEffect } from 'react';
-// @ts-ignore
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 function Footer() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-      offset: 100,
-    });
-  }, []);
-
   return (
     <footer
       className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center px-6'

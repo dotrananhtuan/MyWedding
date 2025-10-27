@@ -1,17 +1,17 @@
 import React from 'react';
 import './content.scss';
-import OurStory from './Components/OurStory';
+import MyFamily from './Components/MyFamily';
 import InvitationCard from './Components/InvitationCard';
-import Location from './Components/Location';
+import StoryContainer from './Components/StoryContainer';
 
 function Content() {
   return (
     <div className=''>
-      <OurStory />
+      <MyFamily />
 
       <InvitationCard />
 
-      <Location />
+      <StoryContainer />
     </div>
   );
 }

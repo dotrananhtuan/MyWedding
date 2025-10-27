@@ -1,20 +1,10 @@
 // InvitationCard.jsx
 import React, { useEffect } from 'react';
 import { MapPin } from 'lucide-react'; // icon map pin đẹp
-import Countdown from '../../Coutdown';
-// @ts-ignore
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Countdown from '../../Components/Coutdown';
 import '../content.scss';
 
 const InvitationCard = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true, // chỉ chạy 1 lần
-      offset: 100,
-    });
-  }, []);
   return (
     <div className='bg-[#fff]'>
       <div className='text-center mt-[-1px]'>
@@ -170,7 +160,7 @@ const InvitationCard = () => {
             </div>
 
             {/* Countdown */}
-            <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={400}>
+            <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={200}>
               <p className="text-center text-pink-600 font-medium tracking-wide mb-3 [font-family:'Dancing_Script',cursive] text-[17px]">
                 💖 Cùng đếm ngược đến ngày vui của hai gia đình
               </p>

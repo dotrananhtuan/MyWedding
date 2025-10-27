@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Footer from '../Footer';
 import Content from '../Content';
 import Header from '../Header';
-import SendWishButton from '../SendWish';
+import SendWishButton from '../Components/SendWish';
 
 function Dashboard() {
   const bgRef: any = useRef(null);

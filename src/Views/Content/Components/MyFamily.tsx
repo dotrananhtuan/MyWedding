@@ -1,15 +1,6 @@
-import React, { useEffect } from 'react';
-// @ts-ignore
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 
-function OurStory() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // thời gian animation
-      once: true, // chỉ chạy 1 lần
-    });
-  }, []);
+function MyFamily() {
   return (
     <div className='bg-white pt-[35px] px-[40px] pb-[100px]'>
       <div className='max-w-4xl mx-auto p-6'>
@@ -34,11 +25,11 @@ function OurStory() {
 
       <div className='text-center text-[40px]' style={{ fontFamily: '"Dancing Script", cursive' }}>
         <p data-aos='fade-right'>Đỗ Trần Anh Tuấn</p> {/* chạy từ trái sang */}
-        <p data-aos='fade-up'> & </p> {/* chữ & chạy từ dưới lên */}
+        <p data-aos='zoom-in'> & </p> {/* chữ & chạy từ dưới lên */}
         <p data-aos='fade-left'>Đỗ Thị Ngọc Hồng</p> {/* chạy từ phải sang */}
       </div>
     </div>
   );
 }
 
-export default OurStory;
+export default MyFamily;

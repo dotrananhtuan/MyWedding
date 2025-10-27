@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import 'aos/dist/aos.css';
 
-function ImageCarousel() {
+function ListImage() {
   return (
     <div className='bg-white py-16 relative'>
       <h2 className='text-center text-2xl md:text-3xl font-semibold text-pink-600 mb-10'>
@@ -93,4 +93,4 @@ function ImageCarousel() {
   );
 }
 
-export default ImageCarousel;
+export default ListImage;
