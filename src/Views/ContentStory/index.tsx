@@ -1,8 +1,8 @@
 import React from 'react';
-import ListImage from './ListImage';
-import LoveStoryTimeline from './StoryTimeline';
+import LoveStoryTimeline from './components/StoryTimeline';
+import ListImage from './components/ListImage';
 
-function StoryContainer() {
+function ContentStory() {
   return (
     <div
       className='min-h-[50%] relative'
@@ -28,4 +28,4 @@ function StoryContainer() {
   );
 }
 
-export default StoryContainer;
+export default ContentStory;

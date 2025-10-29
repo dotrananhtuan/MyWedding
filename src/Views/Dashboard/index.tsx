@@ -3,6 +3,7 @@ import Footer from '../Footer';
 import Content from '../Content';
 import Header from '../Header';
 import SendWishButton from '../Components/SendWish';
+import ContentStory from '../ContentStory';
 
 function Dashboard() {
   const bgRef: any = useRef(null);
@@ -63,6 +64,8 @@ function Dashboard() {
         <Header />
 
         <Content />
+
+        <ContentStory />
 
         <Footer />
       </div>

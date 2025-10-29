@@ -2,7 +2,6 @@ import React from 'react';
 import './content.scss';
 import MyFamily from './Components/MyFamily';
 import InvitationCard from './Components/InvitationCard';
-import StoryContainer from './Components/StoryContainer';
 
 function Content() {
   return (
@@ -10,8 +9,6 @@ function Content() {
       <MyFamily />
 
       <InvitationCard />
-
-      <StoryContainer />
     </div>
   );
 }

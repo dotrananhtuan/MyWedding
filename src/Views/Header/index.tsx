@@ -14,7 +14,8 @@ function Header() {
 
   return (
     <section className='relative h-screen flex flex-col justify-between'>
-      {/* Scroll hint */}
+      {/* <div className='h-[300px] bg-gradient-to-b from-black/70 via-black/30 to-transparent'></div> */}
+
       <div
         className={`scroll-hint absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center transition-all duration-500 ${
           showScrollHint

@@ -1,6 +1,6 @@
 // InvitationCard.jsx
 import React, { useEffect } from 'react';
-import { MapPin } from 'lucide-react'; // icon map pin đẹp
+import { MapPin, Hourglass } from 'lucide-react'; // icon map pin đẹp
 import Countdown from '../../Components/Coutdown';
 import '../content.scss';
 
@@ -85,16 +85,15 @@ const InvitationCard = () => {
           <div className='text-center mt-2' data-aos='fade-up' data-aos-delay='300'>
             <p className='mt-5 text-lg font-medium text-gray-800'>
               Tại{' '}
-              <span className='text-pink-600 font-semibold'>Ấp 6, Hòa Hội, Xuyên Mộc, BR-VT</span>
+              <span className='text-green-700 font-semibold'>Ấp 6, Hòa Hội, Xuyên Mộc, BR-VT</span>
             </p>
-
             <a
               href='https://www.google.com/maps/place/S%C3%A2n+B%C3%B3ng+%C4%90%E1%BB%99i+2/@10.6256666,107.43173,17z/data=!3m1!4b1!4m6!3m5!1s0x3175a58caf2467df:0xe9be86e98cca2f89!8m2!3d10.6256666!4d107.43173!16s%2Fg%2F11gh9q09c_?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D'
               target='_blank'
               rel='noopener noreferrer'
               data-aos='zoom-in'
               data-aos-delay='400'
-              className='inline-flex items-center gap-2 mt-3 pl-5 pr-7 py-2 bg-pink-500 text-white text-sm font-medium rounded-full shadow-md hover:bg-pink-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.03]'
+              className='inline-flex items-center gap-2 mt-3 pl-5 pr-7 py-2 bg-green-600 text-white text-sm font-medium rounded-full shadow-md hover:bg-pink-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.03]'
             >
               <MapPin className='w-4 h-4 animate-bounce-slow' />
               Xem đường đi
@@ -104,13 +103,13 @@ const InvitationCard = () => {
           <div
             className='w-[90%] mx-auto bg-white rounded-2xl p-4'
             data-aos='fade-up'
-            data-aos-delay={400} // delay tổng thể
+            data-aos-delay={400}
           >
             {/* Tháng + Năm */}
             <p className='text-right mb-3 border-b border-gray-400'>
               <span
                 style={{ fontFamily: '"Dancing Script", cursive', fontSize: '22px' }}
-                className='text-pink-600'
+                className='text-green-700'
               >
                 Tháng 04
               </span>
@@ -124,17 +123,19 @@ const InvitationCard = () => {
 
             {/* Header các ngày trong tuần */}
             <div className='grid grid-cols-7 gap-2 text-center text-slate-700 text-sm'>
-              {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((d) => (
+              {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((d) => (
                 <div
                   key={d}
-                  className='font-bold uppercase text-pink-500 tracking-wide text-[13px]'
+                  className={`font-bold uppercase tracking-wide text-[13px] ${
+                    d === 'CN' ? 'text-red-500' : 'text-green-600'
+                  }`}
                 >
                   {d}
                 </div>
               ))}
 
-              {/* khoảng trống trước ngày 1 */}
-              <div className='col-span-6'></div>
+              {/* khoảng trống trước ngày 1 (tuỳ lịch thật, tạm để 1) */}
+              <div className='col-span-1'></div>
 
               {/* Các ngày trong tháng */}
               {Array.from({ length: 30 }, (_, i) => {
@@ -144,13 +145,13 @@ const InvitationCard = () => {
                   <div key={day} className='relative w-8 h-8 flex items-center justify-center'>
                     {isEvent ? (
                       <>
-                        <div className='absolute w-7 h-7 bg-pink-400 rounded-full animate-heartbeat'></div>
+                        <div className='absolute w-7 h-7 bg-green-600 rounded-full animate-heartbeat'></div>
                         <span className='relative z-10 text-white font-bold text-[12px]'>
                           {day}
                         </span>
                       </>
                     ) : (
-                      <span className='hover:bg-pink-100 w-8 h-8 flex items-center justify-center rounded-full'>
+                      <span className='hover:bg-green-200 w-8 h-8 flex items-center justify-center rounded-full'>
                         {day}
                       </span>
                     )}
@@ -161,9 +162,12 @@ const InvitationCard = () => {
 
             {/* Countdown */}
             <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={200}>
-              <p className="text-center text-pink-600 font-medium tracking-wide mb-3 [font-family:'Dancing_Script',cursive] text-[17px]">
-                💖 Cùng đếm ngược đến ngày vui của hai gia đình
-              </p>
+              <div className='flex items-center justify-center gap-2 mb-3'>
+                <p className='text-center text-slate-600 font-light tracking-wide text-[13px]'>
+                  Cùng đếm ngược đến ngày vui của hai gia đình
+                  <span className='text-green-700 ml-1'>💚</span>
+                </p>
+              </div>
               <Countdown />
             </div>
           </div>

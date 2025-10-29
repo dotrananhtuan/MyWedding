@@ -24,20 +24,17 @@ const story = [
 export default function LoveStoryTimeline() {
   return (
     <section className='relative text-white pt-16 px-6 overflow-hidden' id='love-story'>
-      {/* Nếu cần, bạn có thể giữ overlay đen nhẹ ở file cha (Footer hay Background tổng) */}
-
       <h2
-        className='text-4xl font-semibold text-center text-pink-300 mb-16 tracking-wide'
+        className='text-4xl font-semibold text-center text-pink-200 mb-16 tracking-wide'
         data-aos='fade-up'
       >
         Câu chuyện của chúng tôi
       </h2>
 
       <div className='relative flex flex-col items-center'>
-        {/* Đường timeline hồng sáng */}
-        <div className='absolute w-[3px] bg-pink-400/70 top-0 left-1/2 -translate-x-1/2 rounded-full h-full' />
+        {/* Đường timeline chuyển sắc hồng → xanh lá nhẹ */}
+        <div className='absolute w-[3px] bg-gradient-to-b from-pink-300/70 to-green-300/70 top-0 left-1/2 -translate-x-1/2 rounded-full h-full' />
 
-        {/* Các mốc */}
         {story.map((item, index) => (
           <div
             key={index}
@@ -46,19 +43,17 @@ export default function LoveStoryTimeline() {
             }`}
             data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
           >
-            {/* Thẻ nội dung */}
             <div
-              className={`relative backdrop-blur-sm bg-white/10 border border-pink-200/30 p-6 rounded-2xl shadow-lg shadow-black/30 w-full md:w-[45%] ${
+              className={`relative backdrop-blur-md bg-white/15 border border-green-100/40 p-6 rounded-2xl shadow-lg shadow-black/30 w-full md:w-[45%] ${
                 index % 2 === 0 ? 'md:ml-[55%]' : 'md:mr-[55%]'
               }`}
             >
-              {/* Dot hồng nổi bật */}
-              <div className='absolute w-5 h-5 bg-pink-400 rounded-full left-1/2 -translate-x-1/2 -top-8 border-4 border-white/70 shadow-md'></div>
+              {/* Dot xanh lá nhạt có viền hồng */}
+              <div className='absolute w-5 h-5 bg-green-300 rounded-full left-1/2 -translate-x-1/2 -top-8 border-4 border-pink-200/70 shadow-md'></div>
 
-              {/* Nội dung */}
-              <time className='text-sm text-pink-300'>{item.time}</time>
+              <time className='text-sm text-green-200/90'>{item.time}</time>
               <h3 className='text-xl font-semibold mt-1 text-pink-100'>{item.title}</h3>
-              <p className='text-gray-200 mt-2 leading-relaxed'>{item.text}</p>
+              <p className='text-gray-100 mt-2 leading-relaxed'>{item.text}</p>
             </div>
           </div>
         ))}

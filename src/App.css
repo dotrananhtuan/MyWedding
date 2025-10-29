@@ -1,3 +1,28 @@
 .App {
   text-align: center;
 }
+
+/* --- Hiệu ứng gõ chữ --- */
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(34, 197, 94, 0.5); /* xanh lá nhạt */
+  width: 0;
+  animation: typing 1.6s steps(20) forwards, blink 0.8s step-end infinite;
+  color: #86efac;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 300px; /* vừa đủ cho tên */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

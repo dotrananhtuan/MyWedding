@@ -33,12 +33,12 @@ export default function Countdown() {
 function CountdownBlock({ label, value }: { label: any; value: any }) {
   return (
     <div className='flex flex-col items-center'>
-      <div className='min-w-[60px] md:min-w-[72px] text-center rounded-xl bg-pink-100 border border-pink-200 shadow-sm p-2'>
-        <div className='text-lg md:text-2xl font-bold text-pink-600 tabular-nums'>
+      <div className='min-w-[60px] md:min-w-[72px] text-center rounded-xl bg-green-50 border border-green-200 shadow-sm p-2'>
+        <div className='text-lg md:text-2xl font-semibold text-green-700 tabular-nums'>
           {String(value).padStart(2, '0')}
         </div>
       </div>
-      <div className='mt-1 text-[11px] text-pink-500'>{label}</div>
+      <div className='mt-1 text-[11px] text-slate-500'>{label}</div>
     </div>
   );
 }
