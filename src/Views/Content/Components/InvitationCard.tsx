@@ -93,7 +93,7 @@ const InvitationCard = () => {
               rel='noopener noreferrer'
               data-aos='zoom-in'
               data-aos-delay='400'
-              className='inline-flex items-center gap-2 mt-3 pl-5 pr-7 py-2 bg-green-600 text-white text-sm font-medium rounded-full shadow-md hover:bg-pink-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.03]'
+              className='inline-flex items-center gap-2 mt-3 pl-5 pr-7 py-2 bg-green-600 text-white text-sm font-medium rounded-full shadow-md hover:bg-green-800 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.03]'
             >
               <MapPin className='w-4 h-4 animate-bounce-slow' />
               Xem đường đi

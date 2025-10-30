@@ -3,19 +3,19 @@ import React, { useEffect } from 'react';
 function Footer() {
   return (
     <footer
-      className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center px-6'
+      className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center'
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg2.jpg)`,
       }}
       id='footer'
     >
-      {/* Nội dung có overlay riêng */}
+      {/* Overlay & nội dung */}
       <div
-        className='relative z-10 text-center max-w-2xl p-10 rounded-3xl bg-black/50 backdrop-blur-sm shadow-lg'
+        className='relative z-10 text-center max-w-2xl p-10 bg-black/40 backdrop-blur-sm shadow-lg'
         data-aos='fade-up'
       >
         <h2
-          className='text-5xl md:text-6xl font-semibold text-pink-300 mb-6'
+          className='text-5xl md:text-6xl font-semibold text-green-400 mb-6 drop-shadow-lg'
           style={{ fontFamily: '"Dancing Script", cursive' }}
         >
           Lời cảm ơn
@@ -39,7 +39,7 @@ function Footer() {
         </p>
 
         <div
-          className='mt-6 text-pink-300 font-medium tracking-wide'
+          className='mt-6 text-green-300 font-medium tracking-wide'
           data-aos='zoom-in'
           data-aos-delay='400'
           style={{ fontFamily: '"Dancing Script", cursive' }}
