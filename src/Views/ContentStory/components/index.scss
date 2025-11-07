@@ -1,0 +1,45 @@
+/* Overlay animations */
+.lb-overlay-visible {
+  animation: overlayFadeIn 0.3s ease forwards;
+}
+
+.lb-overlay-hidden {
+  animation: overlayFadeOut 0.25s ease forwards;
+}
+
+@keyframes overlayFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Image fade & scale */
+.lb-img-hidden {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.lb-img-visible {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+/* Closing animation */
+.lb-img-close {
+  opacity: 0;
+  transform: translateY(15px) scale(0.95);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
