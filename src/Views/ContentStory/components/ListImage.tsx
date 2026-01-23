@@ -51,10 +51,10 @@ export default function WeddingGallery() {
             style={{ width: `${layout[i]}%` }}
             data-aos={aosList[i % aosList.length]}
             data-aos-delay='400'
-            onClick={() => {
-              setIndex(i);
-              setOpen(true);
-            }}
+            // onClick={() => {
+            //   setIndex(i);
+            //   setOpen(true);
+            // }}
           >
             <img
               src={`${process.env.PUBLIC_URL}${src}`}

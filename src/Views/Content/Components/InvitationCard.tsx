@@ -60,7 +60,7 @@ const InvitationCard = () => {
           </p>
 
           <p className='text-[24px] mt-[20px]' data-aos='zoom-in' data-aos-delay='200'>
-            <span style={{ marginRight: '15px', marginLeft: '20px' }}>16</span>
+            <span style={{ marginRight: '15px', marginLeft: '20px' }}>10</span>
             <span
               style={{
                 fontFamily: '"Dancing Script", cursive',
@@ -70,7 +70,7 @@ const InvitationCard = () => {
                 borderRight: 'solid .5px #000',
               }}
             >
-              Tháng 04
+              Tháng 05
             </span>{' '}
             <span style={{ marginLeft: '15px' }}>2026</span>
           </p>
@@ -79,13 +79,15 @@ const InvitationCard = () => {
             data-aos='fade-down'
             data-aos-delay='200'
           >
-            ( Nhằm ngày 16 tháng 03 năm Bính Ngọ )
+            ( Nhằm ngày 24 tháng 03 năm Bính Ngọ )
           </p>
 
           <div className='text-center mt-2' data-aos='fade-up' data-aos-delay='300'>
             <p className='mt-5 text-lg font-medium text-gray-800'>
               Tại{' '}
-              <span className='text-green-700 font-semibold'>Ấp 6, Hòa Hội, Xuyên Mộc, BR-VT</span>
+              <span className='text-green-700 font-semibold'>
+                Ấp 17, Hòa Hội, Thành phố Hồ Chí Minh
+              </span>
             </p>
             <a
               href='https://www.google.com/maps/place/S%C3%A2n+B%C3%B3ng+%C4%90%E1%BB%99i+2/@10.6256666,107.43173,17z/data=!3m1!4b1!4m6!3m5!1s0x3175a58caf2467df:0xe9be86e98cca2f89!8m2!3d10.6256666!4d107.43173!16s%2Fg%2F11gh9q09c_?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D'
@@ -111,7 +113,7 @@ const InvitationCard = () => {
                 style={{ fontFamily: '"Dancing Script", cursive', fontSize: '22px' }}
                 className='text-green-700'
               >
-                Tháng 04
+                Tháng 05
               </span>
               <span
                 className='font-bold text-[45px] ml-4 text-slate-700'
@@ -123,6 +125,7 @@ const InvitationCard = () => {
 
             {/* Header các ngày trong tuần */}
             <div className='grid grid-cols-7 gap-2 text-center text-slate-700 text-sm'>
+              {/* Header thứ */}
               {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((d) => (
                 <div
                   key={d}
@@ -134,16 +137,19 @@ const InvitationCard = () => {
                 </div>
               ))}
 
-              {/* khoảng trống trước ngày 1 (tuỳ lịch thật, tạm để 1) */}
-              <div className='col-span-1'></div>
+              {/* Khoảng trống trước ngày 1/5/2026 (Thứ 6 → lệch 4 cột) */}
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={`empty-${i}`} />
+              ))}
 
               {/* Các ngày trong tháng */}
-              {Array.from({ length: 30 }, (_, i) => {
+              {Array.from({ length: 31 }, (_, i) => {
                 const day = i + 1;
-                const isEvent = day === 23;
+                const isActive = day === 10;
+
                 return (
                   <div key={day} className='relative w-8 h-8 flex items-center justify-center'>
-                    {isEvent ? (
+                    {isActive ? (
                       <>
                         <div className='absolute w-7 h-7 bg-green-600 rounded-full animate-heartbeat'></div>
                         <span className='relative z-10 text-white font-bold text-[12px]'>
