@@ -13,7 +13,7 @@ const InvitationCard = () => {
             borderTop: 'solid .5px #000',
             padding: '0 20px',
             fontSize: '30px',
-            paddingTop: '10px',
+            paddingTop: '20px',
             fontFamily: '"Dancing Script", cursive',
           }}
         >
@@ -26,7 +26,7 @@ const InvitationCard = () => {
           {/* Ảnh trái (nhỏ) */}
           <div className='w-32 h-44 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/RIN_8740.jpg`}
               alt='Ảnh 1'
               className='w-full h-full object-cover'
             />
@@ -35,7 +35,7 @@ const InvitationCard = () => {
           {/* Ảnh giữa (lớn) */}
           <div className='w-44 h-64 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/RIN_8734.jpg`}
               alt='Ảnh 2'
               className='w-full h-full object-cover'
             />
@@ -44,7 +44,7 @@ const InvitationCard = () => {
           {/* Ảnh phải (nhỏ) */}
           <div className='w-32 h-44 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/bg.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/RIN_8811.jpg`}
               alt='Ảnh 3'
               className='w-full h-full object-cover'
             />
@@ -52,7 +52,7 @@ const InvitationCard = () => {
         </div>
 
         <div data-aos='fade-up'>
-          <p className='uppercase mt-5'>Tiệc mừng Lễ thành hôn</p>
+          <p className='uppercase mt-5'>Tiệc mừng Lễ Tân hôn</p>
 
           <p className='text-[14px] mt-5 font-[300]' data-aos='fade-up' data-aos-delay='100'>
             VÀO LÚC <span className='font-[500]'>11 giờ 30</span> |{' '}
@@ -60,7 +60,7 @@ const InvitationCard = () => {
           </p>
 
           <p className='text-[24px] mt-[20px]' data-aos='zoom-in' data-aos-delay='200'>
-            <span style={{ marginRight: '15px', marginLeft: '20px' }}>10</span>
+            <span style={{ marginRight: '15px', marginLeft: '20px' }}>29</span>
             <span
               style={{
                 fontFamily: '"Dancing Script", cursive',
@@ -70,7 +70,7 @@ const InvitationCard = () => {
                 borderRight: 'solid .5px #000',
               }}
             >
-              Tháng 05
+              Tháng 03
             </span>{' '}
             <span style={{ marginLeft: '15px' }}>2026</span>
           </p>
@@ -79,7 +79,7 @@ const InvitationCard = () => {
             data-aos='fade-down'
             data-aos-delay='200'
           >
-            ( Nhằm ngày 24 tháng 03 năm Bính Ngọ )
+            ( Nhằm ngày 11 tháng 02 năm Bính Ngọ )
           </p>
 
           <div className='text-center mt-2' data-aos='fade-up' data-aos-delay='300'>
@@ -113,7 +113,7 @@ const InvitationCard = () => {
                 style={{ fontFamily: '"Dancing Script", cursive', fontSize: '22px' }}
                 className='text-green-700'
               >
-                Tháng 05
+                Tháng 03
               </span>
               <span
                 className='font-bold text-[45px] ml-4 text-slate-700'
@@ -137,15 +137,15 @@ const InvitationCard = () => {
                 </div>
               ))}
 
-              {/* Khoảng trống trước ngày 1/5/2026 (Thứ 6 → lệch 4 cột) */}
-              {Array.from({ length: 4 }).map((_, i) => (
+              {/* Khoảng trống trước ngày 1/3/2026 (CN → lệch 6 cột) */}
+              {Array.from({ length: 6 }).map((_, i) => (
                 <div key={`empty-${i}`} />
               ))}
 
               {/* Các ngày trong tháng */}
               {Array.from({ length: 31 }, (_, i) => {
                 const day = i + 1;
-                const isActive = day === 10;
+                const isActive = day === 29; // Highlight ngày 29
 
                 return (
                   <div key={day} className='relative w-8 h-8 flex items-center justify-center'>

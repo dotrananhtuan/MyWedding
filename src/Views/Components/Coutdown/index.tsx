@@ -11,7 +11,7 @@ function getTimeRemaining(targetTs: any) {
 }
 
 export default function Countdown() {
-  const target = new Date('2026-05-10T11:30:00+07:00').getTime();
+  const target = new Date('2026-03-29T11:30:00+07:00').getTime();
   const [time, setTime] = useState(() => getTimeRemaining(target));
 
   useEffect(() => {

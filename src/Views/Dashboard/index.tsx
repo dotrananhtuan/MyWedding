@@ -52,7 +52,7 @@ function Dashboard() {
         ref={bgRef}
         className='fixed inset-0 will-change-transform'
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${process.env.PUBLIC_URL}/images/bg2.jpg)`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${process.env.PUBLIC_URL}/images/RIN_8047.JPG)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

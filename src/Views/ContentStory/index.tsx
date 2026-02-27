@@ -5,7 +5,7 @@ import ListImage from './components/ListImage';
 function ContentStory() {
   return (
     <div
-      className='min-h-[50%] relative'
+      className='min-h-[50%] relative mt-[-2px]'
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg.jpg)`,
         backgroundAttachment: 'fixed',
@@ -20,7 +20,7 @@ function ContentStory() {
 
       {/* Nội dung */}
       <div className='relative z-10'>
-        <LoveStoryTimeline />
+        {/* <LoveStoryTimeline /> */}
 
         <ListImage />
       </div>
