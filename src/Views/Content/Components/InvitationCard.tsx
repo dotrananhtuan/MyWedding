@@ -26,7 +26,7 @@ const InvitationCard = () => {
           {/* Ảnh trái (nhỏ) */}
           <div className='w-32 h-44 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/RIN_8740.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/RIN_8740.JPG`}
               alt='Ảnh 1'
               className='w-full h-full object-cover'
             />
@@ -35,7 +35,7 @@ const InvitationCard = () => {
           {/* Ảnh giữa (lớn) */}
           <div className='w-44 h-64 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/RIN_8734.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/RIN_8734.JPG`}
               alt='Ảnh 2'
               className='w-full h-full object-cover'
             />
@@ -44,7 +44,7 @@ const InvitationCard = () => {
           {/* Ảnh phải (nhỏ) */}
           <div className='w-32 h-44 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/RIN_8811.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/RIN_8811.JPG`}
               alt='Ảnh 3'
               className='w-full h-full object-cover'
             />
