@@ -3,6 +3,7 @@ import Footer from '../Footer';
 import Content from '../Content';
 import Header from '../Header';
 import SendWishButton from '../Components/SendWish';
+import TransferQRButton from '../Components/TransferQR';
 import ContentStory from '../ContentStory';
 
 function Dashboard() {
@@ -69,6 +70,8 @@ function Dashboard() {
 
         <Footer />
       </div>
+      <TransferQRButton />
+
       <SendWishButton />
     </div>
   );
