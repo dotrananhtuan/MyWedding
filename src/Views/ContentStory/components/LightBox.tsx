@@ -65,7 +65,9 @@ export default function Lightbox({ open, images, index, onClose, onChange }: Lig
       >
         <img
           src={`${process.env.PUBLIC_URL}${images[index]}`}
+          alt=''
           className={`max-w-[90vw] max-h-[80vh] ${imgState}`}
+          decoding='async'
           onTouchStart={touchStart}
           onTouchEnd={touchEnd}
         />
@@ -75,6 +77,9 @@ export default function Lightbox({ open, images, index, onClose, onChange }: Lig
             <img
               key={i}
               src={`${process.env.PUBLIC_URL}${src}`}
+              alt=''
+              decoding='async'
+              loading='lazy'
               onClick={() => onChange(i)}
               className={`w-16 h-16 rounded-lg cursor-pointer object-cover aspect-square border-2 transition-all ${
                 i === index ? 'border-white opacity-100' : 'border-transparent opacity-60'

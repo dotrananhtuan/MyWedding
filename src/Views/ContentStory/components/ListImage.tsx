@@ -58,7 +58,10 @@ export default function WeddingGallery() {
           >
             <img
               src={`${process.env.PUBLIC_URL}${src}`}
-              className=' w-full aspect-[3/4] object-cover'
+              alt=''
+              className='w-full aspect-[3/4] object-cover'
+              loading='lazy'
+              decoding='async'
             />
           </div>
         ))}

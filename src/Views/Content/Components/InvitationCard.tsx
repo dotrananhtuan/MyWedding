@@ -29,6 +29,8 @@ const InvitationCard = () => {
               src={`${process.env.PUBLIC_URL}/images/RIN_8740.JPG`}
               alt='Ảnh 1'
               className='w-full h-full object-cover'
+              loading='lazy'
+              decoding='async'
             />
           </div>
 
@@ -38,6 +40,8 @@ const InvitationCard = () => {
               src={`${process.env.PUBLIC_URL}/images/RIN_8734.JPG`}
               alt='Ảnh 2'
               className='w-full h-full object-cover'
+              loading='lazy'
+              decoding='async'
             />
           </div>
 
@@ -47,6 +51,8 @@ const InvitationCard = () => {
               src={`${process.env.PUBLIC_URL}/images/RIN_8811.JPG`}
               alt='Ảnh 3'
               className='w-full h-full object-cover'
+              loading='lazy'
+              decoding='async'
             />
           </div>
         </div>

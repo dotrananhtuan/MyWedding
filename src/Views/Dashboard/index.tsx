@@ -5,11 +5,15 @@ import Header from '../Header';
 import SendWishButton from '../Components/SendWish';
 import TransferQRButton from '../Components/TransferQR';
 import ContentStory from '../ContentStory';
+import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
+
+const DASHBOARD_BG = '/images/RIN_8047.JPG';
 
 function Dashboard() {
   const bgRef: any = useRef(null);
   const targetY = useRef(0); // vị trí mục tiêu
   const currentY = useRef(0); // vị trí hiện tại
+  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage(DASHBOARD_BG);
 
   useEffect(() => {
     const MAX_SCROLL = 1000; // chỉ áp dụng hiệu ứng trong 1000px đầu tiên
@@ -53,7 +57,9 @@ function Dashboard() {
         ref={bgRef}
         className='fixed inset-0 will-change-transform'
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${process.env.PUBLIC_URL}/images/RIN_8047.JPG)`,
+          backgroundImage: bgReady && bgUrl
+            ? `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${bgUrl})`
+            : 'linear-gradient(135deg, #2d5016 0%, #1a2f0d 100%)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

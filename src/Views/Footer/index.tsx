@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
 function Footer() {
+  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/images/bg2.jpg');
   return (
     <footer
       className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center'
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg2.jpg)`,
+        backgroundImage: bgReady && bgUrl ? `url(${bgUrl})` : 'linear-gradient(180deg, #1a2f0d 0%, #0f1a08 100%)',
       }}
       id='footer'
     >

@@ -96,6 +96,7 @@ function TransferQRButton() {
                   src={QR_IMAGE}
                   alt='QR chuyển tiền mừng cưới'
                   className='w-56 h-56 object-contain'
+                  decoding='async'
                   onError={() => setImgError(true)}
                 />
               ) : (
@@ -140,20 +141,6 @@ function TransferQRButton() {
               >
                 <Smartphone className='w-5 h-5' />
                 Mở app chuyển khoản
-              </a>
-            )}
-
-            {/* Lưu ảnh QR (mở trong tab mới để tải trên mobile) */}
-            {!imgError && (
-              <a
-                href={QR_IMAGE}
-                target='_blank'
-                rel='noopener noreferrer'
-                download='qr-chuyen-tien.jpg'
-                className='mt-3 w-full flex items-center justify-center gap-2 py-2.5 rounded-lg border border-green-200 bg-green-50 text-green-800 text-sm font-medium hover:bg-green-100 transition touch-manipulation'
-              >
-                <Download className='w-4 h-4' />
-                Lưu ảnh QR
               </a>
             )}
 
