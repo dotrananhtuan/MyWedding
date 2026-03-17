@@ -26,33 +26,33 @@ const InvitationCard = () => {
           {/* Ảnh trái (nhỏ) */}
           <div className='w-32 h-44 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/RIN_8740.JPG`}
+              src={`${process.env.PUBLIC_URL}/Image/9040.jpg`}
               alt='Ảnh 1'
               className='w-full h-full object-cover'
-              loading='lazy'
-              decoding='async'
+              // loading='lazy'
+              // decoding='async'
             />
           </div>
 
           {/* Ảnh giữa (lớn) */}
           <div className='w-44 h-64 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/RIN_8734.JPG`}
+              src={`${process.env.PUBLIC_URL}/Image/8783.jpg`}
               alt='Ảnh 2'
               className='w-full h-full object-cover'
-              loading='lazy'
-              decoding='async'
+              // loading='lazy'
+              // decoding='async'
             />
           </div>
 
           {/* Ảnh phải (nhỏ) */}
           <div className='w-32 h-44 overflow-hidden rounded-sm'>
             <img
-              src={`${process.env.PUBLIC_URL}/images/RIN_8811.JPG`}
+              src={`${process.env.PUBLIC_URL}/Image/9047.jpg`}
               alt='Ảnh 3'
               className='w-full h-full object-cover'
-              loading='lazy'
-              decoding='async'
+              // loading='lazy'
+              // decoding='async'
             />
           </div>
         </div>

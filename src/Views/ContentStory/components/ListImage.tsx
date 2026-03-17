@@ -4,15 +4,15 @@ import Lightbox from './LightBox';
 
 export default function WeddingGallery() {
   const images: string[] = [
-    '/images/bg.jpg',
-    '/images/bg2.jpg',
-    '/images/bg.jpg',
-    '/images/bg2.jpg',
-    '/images/bg.jpg',
-    '/images/bg2.jpg',
-    '/images/bg2.jpg',
-    '/images/bg.jpg',
-    '/images/bg2.jpg',
+    '/Image/L1.jpg',
+    '/Image/L2.jpg',
+    '/Image/L3.jpg',
+    '/Image/L4.jpg',
+    '/Image/L5.jpg',
+    '/Image/L6.jpg',
+    '/Image/L7.jpg',
+    '/Image/L8.jpg',
+    '/Image/L9.jpg',
   ];
 
   const aosList = [
@@ -60,8 +60,8 @@ export default function WeddingGallery() {
               src={`${process.env.PUBLIC_URL}${src}`}
               alt=''
               className='w-full aspect-[3/4] object-cover'
-              loading='lazy'
-              decoding='async'
+              // loading='lazy'
+              // decoding='async'
             />
           </div>
         ))}

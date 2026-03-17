@@ -11,7 +11,11 @@ export function useDeferredBackgroundImage(imageUrl: string): { ready: boolean; 
 
   useEffect(() => {
     if (!imageUrl) return;
-    const fullUrl = imageUrl.startsWith('http') ? imageUrl : `${process.env.PUBLIC_URL || ''}${imageUrl}`;
+    const base = process.env.PUBLIC_URL || '';
+    const fullUrl =
+      imageUrl.startsWith('http') || (base && imageUrl.startsWith(base))
+        ? imageUrl
+        : `${base}${imageUrl}`;
     const img = new Image();
     img.onload = () => {
       setUrl(fullUrl);

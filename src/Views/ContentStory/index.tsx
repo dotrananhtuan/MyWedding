@@ -4,12 +4,13 @@ import ListImage from './components/ListImage';
 import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
 function ContentStory() {
-  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/images/bg.jpg');
+  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/Image/8812.jpg');
   return (
     <div
       className='min-h-[50%] relative mt-[-2px]'
       style={{
-        backgroundImage: bgReady && bgUrl ? `url(${bgUrl})` : 'linear-gradient(180deg, #1a2f0d 0%, #2d5016 100%)',
+        backgroundImage:
+          bgReady && bgUrl ? `url(${bgUrl})` : 'linear-gradient(180deg, #1a2f0d 0%, #2d5016 100%)',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center 50%',

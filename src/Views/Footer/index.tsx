@@ -2,18 +2,19 @@ import React from 'react';
 import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
 function Footer() {
-  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/images/bg2.jpg');
+  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/Image/8812.jpg');
   return (
     <footer
       className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center'
       style={{
-        backgroundImage: bgReady && bgUrl ? `url(${bgUrl})` : 'linear-gradient(180deg, #1a2f0d 0%, #0f1a08 100%)',
+        backgroundImage:
+          bgReady && bgUrl ? `url(${bgUrl})` : 'linear-gradient(180deg, #1a2f0d 0%, #0f1a08 100%)',
       }}
       id='footer'
     >
       {/* Overlay & nội dung */}
       <div
-        className='relative z-10 text-center max-w-2xl p-10 bg-black/40 backdrop-blur-sm shadow-lg'
+        className='relative z-10 text-center max-w-2xl p-10 bg-black/40  shadow-lg'
         data-aos='fade-up'
       >
         <h2

@@ -7,7 +7,8 @@ import TransferQRButton from '../Components/TransferQR';
 import ContentStory from '../ContentStory';
 import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
-const DASHBOARD_BG = '/images/RIN_8047.JPG';
+// Ảnh trong public/Image/ — dùng PUBLIC_URL để đúng khi deploy (GitHub Pages: /MyWedding)
+const DASHBOARD_BG = `${process.env.PUBLIC_URL || ''}/Image/8075.jpg`;
 
 function Dashboard() {
   const bgRef: any = useRef(null);
