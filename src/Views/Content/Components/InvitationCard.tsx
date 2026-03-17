@@ -57,130 +57,175 @@ const InvitationCard = () => {
           </div>
         </div>
 
-        <div data-aos='fade-up'>
-          <p className='uppercase mt-5'>Tiệc mừng Lễ Tân hôn</p>
+        <div data-aos='fade-up' className='mt-6 px-3'>
+          <p className='uppercase text-center text-sm text-slate-500 mb-4'>Thời gian & địa điểm</p>
 
-          <p className='text-[14px] mt-5 font-[300]' data-aos='fade-up' data-aos-delay='100'>
-            VÀO LÚC <span className='font-[500]'>11 giờ 30</span> |{' '}
-            <span className='font-[500]'>Chủ nhật</span>
-          </p>
-
-          <p className='text-[24px] mt-[20px]' data-aos='zoom-in' data-aos-delay='200'>
-            <span style={{ marginRight: '15px', marginLeft: '20px' }}>29</span>
-            <span
-              style={{
-                fontFamily: '"Dancing Script", cursive',
-                fontSize: '30px',
-                padding: '0 20px',
-                borderLeft: 'solid .5px #000',
-                borderRight: 'solid .5px #000',
-              }}
-            >
-              Tháng 03
-            </span>{' '}
-            <span style={{ marginLeft: '15px' }}>2026</span>
-          </p>
-          <p
-            className='italic text-gray-600 text-sm mt-2'
-            data-aos='fade-down'
-            data-aos-delay='200'
-          >
-            ( Nhằm ngày 11 tháng 02 năm Bính Ngọ )
-          </p>
-
-          <div className='text-center mt-2' data-aos='fade-up' data-aos-delay='300'>
-            <p className='mt-5 text-lg font-medium text-gray-800'>
-              Tại{' '}
-              <span className='text-green-700 font-semibold'>
-                Ấp 17, Hòa Hội, Thành phố Hồ Chí Minh
-              </span>
-            </p>
-            <a
-              href='https://www.google.com/maps/place/S%C3%A2n+B%C3%B3ng+%C4%90%E1%BB%99i+2/@10.6256666,107.43173,17z/data=!3m1!4b1!4m6!3m5!1s0x3175a58caf2467df:0xe9be86e98cca2f89!8m2!3d10.6256666!4d107.43173!16s%2Fg%2F11gh9q09c_?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D'
-              target='_blank'
-              rel='noopener noreferrer'
-              data-aos='zoom-in'
-              data-aos-delay='400'
-              className='inline-flex items-center gap-2 mt-3 pl-5 pr-7 py-2 bg-green-600 text-white text-sm font-medium rounded-full shadow-md hover:bg-green-800 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.03]'
-            >
-              <MapPin className='w-4 h-4 animate-bounce-slow' />
-              Xem đường đi
-            </a>
-          </div>
-
-          <div
-            className='w-[90%] mx-auto bg-white rounded-2xl p-4'
-            data-aos='fade-up'
-            data-aos-delay={400}
-          >
-            {/* Tháng + Năm */}
-            <p className='text-right mb-3 border-b border-gray-400'>
-              <span
-                style={{ fontFamily: '"Dancing Script", cursive', fontSize: '22px' }}
-                className='text-green-700'
-              >
-                Tháng 03
-              </span>
-              <span
-                className='font-bold text-[45px] ml-4 text-slate-700'
-                style={{ fontFamily: "'Poppins', sans-serif" }}
-              >
-                2026
-              </span>
-            </p>
-
-            {/* Header các ngày trong tuần */}
-            <div className='grid grid-cols-7 gap-2 text-center text-slate-700 text-sm'>
-              {/* Header thứ */}
-              {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((d) => (
-                <div
-                  key={d}
-                  className={`font-bold uppercase tracking-wide text-[13px] ${
-                    d === 'CN' ? 'text-red-500' : 'text-green-600'
-                  }`}
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto'>
+            {/* Card 1 */}
+            <div className='rounded-2xl border border-green-200 bg-green-50/60 p-5 text-center shadow-sm'>
+              <p className='uppercase text-base font-semibold text-green-800 tracking-wide'>
+                Tiệc mừng lễ Vu Quy
+              </p>
+              <div className='w-16 h-[2px] bg-green-300 mx-auto my-3 rounded-full' />
+              <p className='text-[14px] text-slate-700 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 tracking-wide'>
+                <span className='font-semibold text-green-700 text-base'>10h30</span>
+                <span className='text-slate-400'>•</span>
+                <span className='text-slate-500'>Chủ nhật</span>
+                <span className='text-slate-400'>•</span>
+                <span className='font-semibold text-slate-800'>22</span>
+                <span
+                  className='text-green-700'
+                  style={{ fontFamily: '"Dancing Script", cursive', fontSize: '20px' }}
                 >
-                  {d}
-                </div>
-              ))}
-
-              {/* Khoảng trống trước ngày 1/3/2026 (CN → lệch 6 cột) */}
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={`empty-${i}`} />
-              ))}
-
-              {/* Các ngày trong tháng */}
-              {Array.from({ length: 31 }, (_, i) => {
-                const day = i + 1;
-                const isActive = day === 29; // Highlight ngày 29
-
-                return (
-                  <div key={day} className='relative w-8 h-8 flex items-center justify-center'>
-                    {isActive ? (
-                      <>
-                        <div className='absolute w-7 h-7 bg-green-600 rounded-full animate-heartbeat'></div>
-                        <span className='relative z-10 text-white font-bold text-[12px]'>
-                          {day}
-                        </span>
-                      </>
-                    ) : (
-                      <span className='hover:bg-green-200 w-8 h-8 flex items-center justify-center rounded-full'>
-                        {day}
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
+                  Tháng 03
+                </span>
+                <span className='font-semibold text-slate-800'>2026</span>
+              </p>
+              <p className='italic text-gray-500 text-xs mt-1.5'>
+                (Nhằm ngày 04 tháng 02 năm Bính Ngọ)
+              </p>
+              <p className='mt-3 text-sm text-gray-700'>
+                Tại <span className='text-green-700 font-semibold'>Tư gia nhà gái</span>
+              </p>
+              <a
+                href='https://www.google.com/maps/place/16%C2%B026%2709.5%22N+107%C2%B047%2700.6%22E/@16.4359753,107.7828473,167m/data=!3m2!1e3!4b1!4m12!1m7!3m6!1s0x31419c14032bd8b1:0xa628e7707fcc384a!2zQ2jhu6MgQ2hp4buBdSBWaW5oIFRoYW5o!8m2!3d16.4375516!4d107.7813493!16s%2Fg%2F11c1szsz5y!3m3!8m2!3d16.435974!4d107.783491?entry=ttu'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-1 mt-4 px-3.5 py-1.5 bg-green-600 text-white text-xs font-medium rounded-full hover:bg-green-700 hover:scale-105 transition-all'
+              >
+                <MapPin className='w-3.5 h-3.5 animate-bounce-slow' />
+                Xem đường đi
+              </a>
             </div>
 
-            {/* Countdown */}
-            <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={200}>
-              <div className='flex items-center justify-center gap-2 mb-3'>
-                <p className='text-center text-slate-600 font-light tracking-wide text-[13px]'>
-                  Cùng đếm ngược đến ngày vui của hai gia đình
-                  <span className='text-green-700 ml-1'>💚</span>
-                </p>
+            {/* Card 2 */}
+            <div className='rounded-2xl border border-green-200 bg-green-50/60 p-5 text-center shadow-sm'>
+              <p className='uppercase text-base font-semibold text-green-800 tracking-wide'>
+                Tiệc mừng Lễ Tân hôn
+              </p>
+              <div className='w-16 h-[2px] bg-green-300 mx-auto my-3 rounded-full' />
+              <p className='text-[14px] text-slate-700 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 tracking-wide'>
+                <span className='font-semibold text-green-700 text-base'>11h30</span>
+                <span className='text-slate-400'>•</span>
+                <span className='text-slate-500'>Chủ nhật</span>
+                <span className='text-slate-400'>•</span>
+                <span className='font-semibold text-slate-800'>29</span>
+                <span
+                  className='text-green-700'
+                  style={{ fontFamily: '"Dancing Script", cursive', fontSize: '20px' }}
+                >
+                  Tháng 03
+                </span>
+                <span className='font-semibold text-slate-800'>2026</span>
+              </p>
+              <p className='italic text-gray-500 text-xs mt-1.5'>
+                (Nhằm ngày 11 tháng 02 năm Bính Ngọ)
+              </p>
+              <p className='mt-3 text-sm text-gray-700'>
+                Tại{' '}
+                <span className='text-green-700 font-semibold'>
+                  Sân vận động Ấp 17, xã Hòa Hội, TP.HCM
+                </span>
+              </p>
+              <a
+                href='https://www.google.com/maps/place/S%C3%A2n+B%C3%B3ng+%C4%90%E1%BB%99i+2/@10.6256666,107.43173,17z/data=!3m1!4b1!4m6!3m5!1s0x3175a58caf2467df:0xe9be86e98cca2f89!8m2!3d10.6256666!4d107.43173!16s%2Fg%2F11gh9q09c_?entry=ttu'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-1 mt-4 px-3.5 py-1.5 bg-green-600 text-white text-xs font-medium rounded-full hover:bg-green-700 hover:scale-105 transition-all'
+              >
+                <MapPin className='w-3.5 h-3.5 animate-bounce-slow' />
+                Xem đường đi
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className='w-[90%] mx-auto mt-8 bg-white rounded-2xl p-4'
+          // data-aos='fade-up'
+          // data-aos-delay={400}
+        >
+          {/* Tháng + Năm */}
+          <p className='text-right mb-3 border-b border-gray-400'>
+            <span
+              style={{ fontFamily: '"Dancing Script", cursive', fontSize: '22px' }}
+              className='text-green-700'
+            >
+              Tháng 03
+            </span>
+            <span
+              className='font-bold text-[45px] ml-4 text-slate-700'
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              2026
+            </span>
+          </p>
+
+          {/* Header các ngày trong tuần */}
+          <div className='grid grid-cols-7 gap-2 text-center text-slate-700 text-sm'>
+            {/* Header thứ */}
+            {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((d) => (
+              <div
+                key={d}
+                className={`font-bold uppercase tracking-wide text-[13px] ${
+                  d === 'CN' ? 'text-red-500' : 'text-green-600'
+                }`}
+              >
+                {d}
               </div>
-              <Countdown />
+            ))}
+
+            {/* Khoảng trống trước ngày 1/3/2026 (CN → lệch 6 cột) */}
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={`empty-${i}`} />
+            ))}
+
+            {/* Các ngày trong tháng */}
+            {Array.from({ length: 31 }, (_, i) => {
+              const day = i + 1;
+              const activeDays = [22, 29];
+              const isActive = activeDays.includes(day);
+
+              return (
+                <div key={day} className='relative w-8 h-8 flex items-center justify-center'>
+                  {isActive ? (
+                    <>
+                      <div className='absolute w-7 h-7 bg-green-600 rounded-full animate-heartbeat'></div>
+                      <span className='relative z-10 text-white font-bold text-[12px]'>{day}</span>
+                    </>
+                  ) : (
+                    <span className='hover:bg-green-200 w-8 h-8 flex items-center justify-center rounded-full'>
+                      {day}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Countdown — 2 sự kiện */}
+          <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={200}>
+            <p className='text-center text-slate-600 font-light tracking-wide text-[13px] mb-4'>
+              Cùng đếm ngược đến ngày vui của hai gia đình
+              <span className='text-green-700 ml-1'>💚</span>
+            </p>
+
+            <div className='space-y-5'>
+              <div className='rounded-xl bg-green-50/80 border border-green-200/80 p-4'>
+                <p className='text-center text-green-800 font-medium text-sm mb-1'>
+                  Lễ Vu Quy (Nhà gái)
+                </p>
+                <p className='text-center text-slate-500 text-xs'>10h30 • Chủ nhật 22/03/2026</p>
+                <Countdown targetDate='2026-03-22T10:30:00+07:00' />
+              </div>
+
+              <div className='rounded-xl bg-green-50/80 border border-green-200/80 p-4'>
+                <p className='text-center text-green-800 font-medium text-sm mb-1'>
+                  Tiệc mừng Lễ Tân hôn
+                </p>
+                <p className='text-center text-slate-500 text-xs'>11h30 • Chủ nhật 29/03/2026</p>
+                <Countdown targetDate='2026-03-29T11:30:00+07:00' />
+              </div>
             </div>
           </div>
         </div>

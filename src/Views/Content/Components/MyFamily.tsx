@@ -2,7 +2,7 @@ import React from 'react';
 
 function MyFamily() {
   return (
-    <div className='bg-white pt-[35px] px-[40px] pb-[100px]'>
+    <div className='bg-white pt-[50px] px-[40px] pb-[60px]'>
       <div className='max-w-4xl mx-auto py-4'>
         <div className='grid grid-cols-2 gap-2 text-center'>
           {/* Nhà trai */}
@@ -29,9 +29,9 @@ function MyFamily() {
         </div>
       </div>
 
-      <p className='text-center mb-4 mt-[50px]'>
+      {/* <p className='text-center mb-4 mt-[50px]'>
         Trân trọng thông báo <b>LỄ TÂN HÔN</b> của
-      </p>
+      </p> */}
 
       <div className='text-center text-[40px]' style={{ fontFamily: '"Dancing Script", cursive' }}>
         <p data-aos='fade-right'>Đỗ Trần Anh Tuấn</p> {/* chạy từ trái sang */}

@@ -57,9 +57,10 @@ function Dashboard() {
         ref={bgRef}
         className='fixed inset-0 will-change-transform'
         style={{
-          backgroundImage: bgReady && bgUrl
-            ? `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${bgUrl})`
-            : 'linear-gradient(135deg, #2d5016 0%, #1a2f0d 100%)',
+          backgroundImage:
+            bgReady && bgUrl
+              ? `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${bgUrl})`
+              : 'linear-gradient(135deg, #2d5016 0%, #1a2f0d 100%)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

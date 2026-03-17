@@ -10,8 +10,13 @@ function getTimeRemaining(targetTs: any) {
   return { total: diff, days, hrs, min, sec };
 }
 
-export default function Countdown() {
-  const target = new Date('2026-03-29T11:30:00+07:00').getTime();
+interface CountdownProps {
+  targetDate: string; // ISO string, e.g. '2026-03-29T11:30:00+07:00'
+  title?: string;
+}
+
+export default function Countdown({ targetDate, title }: CountdownProps) {
+  const target = new Date(targetDate).getTime();
   const [time, setTime] = useState(() => getTimeRemaining(target));
 
   useEffect(() => {
@@ -20,11 +25,16 @@ export default function Countdown() {
   }, [target]);
 
   return (
-    <div className='mt-2 flex justify-center gap-3'>
-      <CountdownBlock label='Ngày' value={time.days} />
-      <CountdownBlock label='Giờ' value={time.hrs} />
-      <CountdownBlock label='Phút' value={time.min} />
-      <CountdownBlock label='Giây' value={time.sec} />
+    <div className='w-full'>
+      {title && (
+        <p className='text-center text-slate-600 font-medium text-[13px] mb-2'>{title}</p>
+      )}
+      <div className='mt-2 flex justify-center gap-3'>
+        <CountdownBlock label='Ngày' value={time.days} />
+        <CountdownBlock label='Giờ' value={time.hrs} />
+        <CountdownBlock label='Phút' value={time.min} />
+        <CountdownBlock label='Giây' value={time.sec} />
+      </div>
     </div>
   );
 }
