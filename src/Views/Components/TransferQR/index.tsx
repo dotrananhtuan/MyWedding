@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { QrCode, Copy, Check, Download, Smartphone } from 'lucide-react';
 
 // Đặt ảnh QR VietQR/ngân hàng vào: public/images/qr-chuyen-tien.png
-const QR_IMAGE = `${process.env.PUBLIC_URL}/images/qr_chuye_tien.jpg`;
+const QR_IMAGE = `${process.env.PUBLIC_URL}/Image/qr.jpg`;
 const ACCOUNT_NAME = 'DO THI NGOC HONG';
 const ACCOUNT_NUMBER = '1032182873';
 

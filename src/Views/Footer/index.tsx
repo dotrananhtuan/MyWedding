@@ -28,8 +28,8 @@ function Footer() {
           className='text-gray-100 text-lg leading-relaxed mb-4'
           style={{ fontFamily: '"Poppins", sans-serif' }}
         >
-          Cảm ơn gia đình và bạn bè thân thương đã luôn bên cạnh, sẻ chia và chúc phúc cho chúng
-          tôi.
+          Cảm ơn gia đình, bạn bè và anh chị em đồng nghiệp đã luôn bên cạnh, động viên và gửi lời
+          chúc phúc đến cho Anh Tuấn & Ngọc Hồng.
         </p>
 
         <p
@@ -48,7 +48,7 @@ function Footer() {
           style={{ fontFamily: '"Dancing Script", cursive' }}
         >
           — Trân trọng, <br />
-          <span className='text-white font-semibold text-2xl block mt-2'>Ngọc Hồng & Anh Tuấn</span>
+          <span className='text-white font-semibold text-2xl block mt-2'>Anh Tuấn & Ngọc Hồng</span>
         </div>
       </div>
     </footer>

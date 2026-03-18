@@ -57,12 +57,17 @@ const InvitationCard = () => {
           </div>
         </div>
 
-        <div data-aos='fade-up' className='mt-6 px-3'>
-          <p className='uppercase text-center text-sm text-slate-500 mb-4'>Thời gian & địa điểm</p>
+        <div className='mt-6 px-3'>
+          <p data-aos='fade-down' className='uppercase text-center text-sm text-slate-500 mb-4'>
+            Thời gian & địa điểm
+          </p>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto'>
             {/* Card 1 */}
-            <div className='rounded-2xl border border-green-200 bg-green-50/60 p-5 text-center shadow-sm'>
+            <div
+              data-aos='fade-right'
+              className='rounded-2xl border border-green-200 bg-green-50/60 p-5 text-center shadow-sm'
+            >
               <p className='uppercase text-base font-semibold text-green-800 tracking-wide'>
                 Tiệc mừng lễ Vu Quy
               </p>
@@ -99,7 +104,10 @@ const InvitationCard = () => {
             </div>
 
             {/* Card 2 */}
-            <div className='rounded-2xl border border-green-200 bg-green-50/60 p-5 text-center shadow-sm'>
+            <div
+              data-aos='fade-left'
+              className='rounded-2xl border border-green-200 bg-green-50/60 p-5 text-center shadow-sm'
+            >
               <p className='uppercase text-base font-semibold text-green-800 tracking-wide'>
                 Tiệc mừng Lễ Tân hôn
               </p>
