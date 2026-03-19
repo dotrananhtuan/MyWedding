@@ -1,6 +1,6 @@
 // InvitationCard.jsx
 import React, { useEffect } from 'react';
-import { MapPin, Hourglass } from 'lucide-react'; // icon map pin đẹp
+import { MapPin, Hourglass, Heart } from 'lucide-react'; // icon map pin đẹp
 import Countdown from '../../Components/Coutdown';
 import '../content.scss';
 
@@ -198,8 +198,12 @@ const InvitationCard = () => {
                 <div key={day} className='relative w-8 h-8 flex items-center justify-center'>
                   {isActive ? (
                     <>
-                      <div className='absolute w-7 h-7 bg-green-600 rounded-full animate-heartbeat'></div>
-                      <span className='relative z-10 text-white font-bold text-[12px]'>{day}</span>
+                      <Heart
+                        className='absolute w-7 h-7 text-red-500 fill-red-500 animate-heartbeat'
+                        strokeWidth={2}
+                        aria-hidden
+                      />
+                      <span className='relative z-10 text-white font-bold text-[12px] drop-shadow-[0_0_1px_rgba(0,0,0,0.8)]'>{day}</span>
                     </>
                   ) : (
                     <span className='hover:bg-green-200 w-8 h-8 flex items-center justify-center rounded-full'>
