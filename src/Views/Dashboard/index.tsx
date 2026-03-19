@@ -4,6 +4,7 @@ import Content from '../Content';
 import Header from '../Header';
 import SendWishButton from '../Components/SendWish';
 import TransferQRButton from '../Components/TransferQR';
+import MusicPlayer from '../Components/MusicPlayer';
 import ContentStory from '../ContentStory';
 import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
@@ -79,6 +80,7 @@ function Dashboard() {
         <Footer />
       </div>
       <TransferQRButton />
+      <MusicPlayer />
 
       <SendWishButton />
     </div>
