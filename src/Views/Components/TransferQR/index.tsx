@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { QrCode, Copy, Check, Download, Smartphone } from 'lucide-react';
+import { ScanLine, Smartphone } from 'lucide-react';
 
 // Đặt ảnh QR VietQR/ngân hàng vào: public/images/qr-chuyen-tien.png
 const QR_IMAGE = `${process.env.PUBLIC_URL}/Image/qr.jpg`;
@@ -64,7 +64,7 @@ function TransferQRButton() {
         title='Chuyển tiền mừng cưới'
         aria-label='Xem QR chuyển tiền mừng cưới'
       >
-        <QrCode className='w-7 h-7 text-white' strokeWidth={2} />
+        <ScanLine className='w-7 h-7 text-white' strokeWidth={2} />
       </button>
 
       {/* Modal chỉ hiển thị QR code */}

@@ -19,7 +19,7 @@ function App() {
 
   // Tổng thời gian mở màn ~3s
   useEffect(() => {
-    const hideOverlay = setTimeout(() => setLoading(false), 2000);
+    const hideOverlay = setTimeout(() => setLoading(false), 2500);
     return () => clearTimeout(hideOverlay);
   }, []);
 

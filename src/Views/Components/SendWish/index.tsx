@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './style.scss';
 import ThankYouModal from './ThankYou';
+import { MailOpen } from 'lucide-react';
 
 function SendWishButton() {
   const [open, setOpen] = useState(false);
@@ -41,7 +42,7 @@ function SendWishButton() {
         time: new Date().toLocaleString('vi-VN'),
         message: message,
       },
-      'W5QIkZKsw4tWL2cID'
+      'W5QIkZKsw4tWL2cID',
     );
 
     setName('');
@@ -68,20 +69,7 @@ function SendWishButton() {
     transition-all duration-300 z-50
   '
       >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          stroke='white'
-          strokeWidth='2.2'
-          viewBox='0 0 24 24'
-          className='w-7 h-7'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M3 7l9 6 9-6M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7'
-          />
-        </svg>
+        <MailOpen className='w-7 h-7 text-white' strokeWidth={2} />
       </button>
 
       {/* Modal */}

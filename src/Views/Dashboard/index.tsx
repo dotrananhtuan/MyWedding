@@ -8,7 +8,7 @@ import ContentStory from '../ContentStory';
 import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
 // Ảnh trong public/Image/ — dùng PUBLIC_URL để đúng khi deploy (GitHub Pages: /MyWedding)
-const DASHBOARD_BG = `${process.env.PUBLIC_URL || ''}/Image/8075.jpg`;
+const DASHBOARD_BG = `${process.env.PUBLIC_URL || ''}/Image/8812.jpg`;
 
 function Dashboard() {
   const bgRef: any = useRef(null);
@@ -63,7 +63,7 @@ function Dashboard() {
               ? `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${bgUrl})`
               : 'linear-gradient(135deg, #2d5016 0%, #1a2f0d 100%)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: '40% center',
           backgroundRepeat: 'no-repeat',
           zIndex: -1,
         }}

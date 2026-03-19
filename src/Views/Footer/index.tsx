@@ -2,7 +2,7 @@ import React from 'react';
 import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
 function Footer() {
-  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/Image/8812.jpg');
+  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/Image/8075.jpg');
   return (
     <footer
       className='relative h-[100vh] bg-cover bg-center bg-fixed text-white flex flex-col justify-center items-center'
