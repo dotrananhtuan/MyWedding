@@ -17,6 +17,19 @@ function Dashboard() {
   const currentY = useRef(0); // vị trí hiện tại
   const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage(DASHBOARD_BG);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024); // lg breakpoint
+    };
+
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
   useEffect(() => {
     const MAX_SCROLL = 1000; // chỉ áp dụng hiệu ứng trong 1000px đầu tiên
     const SPEED = 0.2;
@@ -63,8 +76,9 @@ function Dashboard() {
             bgReady && bgUrl
               ? `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${bgUrl})`
               : 'linear-gradient(135deg, #2d5016 0%, #1a2f0d 100%)',
-          backgroundSize: 'cover',
-          backgroundPosition: '40% center',
+
+          backgroundSize: isDesktop ? 'contain' : 'cover',
+          backgroundPosition: isDesktop ? 'center' : '40% center',
           backgroundRepeat: 'no-repeat',
           zIndex: -1,
         }}

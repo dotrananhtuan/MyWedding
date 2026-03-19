@@ -1,23 +1,8 @@
-import React from 'react';
-import LoveStoryTimeline from './components/StoryTimeline';
 import ListImage from './components/ListImage';
-import { useDeferredBackgroundImage } from '../../hooks/useDeferredBackgroundImage';
 
 function ContentStory() {
-  const { ready: bgReady, url: bgUrl } = useDeferredBackgroundImage('/Image/8812.jpg');
   return (
-    <div
-      className='min-h-[50%] relative mt-[-2px]'
-      style={{
-        backgroundImage:
-          bgReady && bgUrl ? `url(${bgUrl})` : 'linear-gradient(180deg, #1a2f0d 0%, #2d5016 100%)',
-        backgroundAttachment: 'fixed',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 50%',
-        backgroundRepeat: 'no-repeat',
-        transition: 'background-position 0.2s ease-out',
-      }}
-    >
+    <div className='min-h-[50%] relative mt-[-2px]'>
       {/* Overlay mờ */}
       <div className='absolute inset-0 bg-black/30' />
 

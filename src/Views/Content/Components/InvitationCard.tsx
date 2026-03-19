@@ -23,36 +23,45 @@ const InvitationCard = () => {
         <p className='uppercase mb-6 mt-1'>Tham dự lễ cưới của Tuấn & Hồng</p>
 
         <div className='flex justify-center items-center gap-1 px-1'>
-          {/* Ảnh trái (nhỏ) */}
-          <div className='w-32 h-44 overflow-hidden rounded-sm'>
+          {/* Ảnh trái (nhỏ) — trượt từ trái vào */}
+          <div
+            className='w-32 h-44 overflow-hidden rounded-sm'
+            data-aos='fade-right'
+            data-aos-duration='600'
+            data-aos-delay='100'
+          >
             <img
               src={`${process.env.PUBLIC_URL}/Image/9040.jpg`}
               alt='Ảnh 1'
               className='w-full h-full object-cover'
-              // loading='lazy'
-              // decoding='async'
             />
           </div>
 
-          {/* Ảnh giữa (lớn) */}
-          <div className='w-44 h-64 overflow-hidden rounded-sm'>
+          {/* Ảnh giữa (lớn) — zoom nhẹ + fade */}
+          <div
+            className='w-44 h-64 overflow-hidden rounded-sm'
+            data-aos='zoom-in'
+            data-aos-duration='600'
+            data-aos-delay='200'
+          >
             <img
               src={`${process.env.PUBLIC_URL}/Image/8783.jpg`}
               alt='Ảnh 2'
               className='w-full h-full object-cover'
-              // loading='lazy'
-              // decoding='async'
             />
           </div>
 
-          {/* Ảnh phải (nhỏ) */}
-          <div className='w-32 h-44 overflow-hidden rounded-sm'>
+          {/* Ảnh phải (nhỏ) — trượt từ phải vào */}
+          <div
+            className='w-32 h-44 overflow-hidden rounded-sm'
+            data-aos='fade-left'
+            data-aos-duration='600'
+            data-aos-delay='300'
+          >
             <img
               src={`${process.env.PUBLIC_URL}/Image/9047.jpg`}
               alt='Ảnh 3'
               className='w-full h-full object-cover'
-              // loading='lazy'
-              // decoding='async'
             />
           </div>
         </div>
@@ -149,10 +158,14 @@ const InvitationCard = () => {
         </div>
 
         <div
-          className='w-[90%] mx-auto mt-8 bg-white rounded-2xl p-4'
-          // data-aos='fade-up'
-          // data-aos-delay={400}
+          className='
+            w-[90%] 
+            max-w-md md:max-w-lg lg:max-w-xl
+            mx-auto mt-8 
+            bg-white rounded-2xl p-4 md:p-6
+          '
         >
+          {' '}
           {/* Tháng + Năm */}
           <p className='text-right mb-3 border-b border-gray-400'>
             <span
@@ -168,7 +181,6 @@ const InvitationCard = () => {
               2026
             </span>
           </p>
-
           {/* Header các ngày trong tuần */}
           <div className='grid grid-cols-7 gap-2 text-center text-slate-700 text-sm'>
             {/* Header thứ */}
@@ -203,7 +215,9 @@ const InvitationCard = () => {
                         strokeWidth={2}
                         aria-hidden
                       />
-                      <span className='relative z-10 text-white font-bold text-[12px] drop-shadow-[0_0_1px_rgba(0,0,0,0.8)]'>{day}</span>
+                      <span className='relative z-10 text-white font-bold text-[12px] drop-shadow-[0_0_1px_rgba(0,0,0,0.8)]'>
+                        {day}
+                      </span>
                     </>
                   ) : (
                     <span className='hover:bg-green-200 w-8 h-8 flex items-center justify-center rounded-full'>
@@ -214,7 +228,6 @@ const InvitationCard = () => {
               );
             })}
           </div>
-
           {/* Countdown — 2 sự kiện */}
           <div className='mt-4 pb-6' data-aos='fade-up' data-aos-delay={200}>
             <p className='text-center text-slate-600 font-light tracking-wide text-[13px] mb-4'>
